@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavBar } from '../layouts/navBar'
+import {NavBar} from "../layouts/navBar";
+
 
 export const HomePage = () => {
     return (

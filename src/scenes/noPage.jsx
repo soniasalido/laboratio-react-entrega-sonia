@@ -14,6 +14,5 @@ export const NoPage = () => {
                 </p>
             </div>
         </>
-
     )
 }

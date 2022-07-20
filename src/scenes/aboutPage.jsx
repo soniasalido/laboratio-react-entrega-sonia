@@ -2,7 +2,7 @@
 import React from 'react';
 import {NavBar} from "../layouts/navBar";
 
-export const About = () => {
+export const AboutPage = () => {
     return (
         <>
             <NavBar />

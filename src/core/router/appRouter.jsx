@@ -1,20 +1,22 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { About } from '../../scenes/about';
+import {AboutPage, HomePage, MembersPage, NoPage} from '../../scenes/';
 import { LoginPage } from '../../pods/login/loginPage';
-import { NoPage } from '../../scenes/noPage';
-import {HomePage} from "../../scenes/homePage";
+import { MembersRoutes } from "./membersRoutes";
+
 
 export const AppRouter = () => {
     return (
         <>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="login" element={<LoginPage />} />
-                <Route path="about" element={ <About />} />
-                <Route path="*" element={<NoPage />} />
-            </Routes>
-
+            <div className="container">
+                <Routes>
+                    <Route index element={<HomePage />} />
+                    <Route path="login" element={<LoginPage />} />
+                    <Route path="about" element={ <AboutPage />} />
+                    <Route path="*" element={ <NoPage />} />
+                    <Route path="members" element={<MembersRoutes />} />
+                </Routes>
+            </div>
         </>
     )
 }
