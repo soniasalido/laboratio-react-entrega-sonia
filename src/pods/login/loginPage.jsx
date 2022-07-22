@@ -1,7 +1,7 @@
 
 import React from 'react';
-import {NavBar} from "../../layouts/navBar";
 import {useNavigate} from 'react-router-dom';
+import {NavBar} from "../../layouts/navBar.jsx";
 
 export const LoginPage = () => {
 

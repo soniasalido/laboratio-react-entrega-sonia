@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, NavLink, useNavigate} from 'react-router-dom';
 
-export const NavBar = () => {
+export const PrivateNavBar = () => {
 
     const user = true;
 
@@ -19,9 +19,9 @@ export const NavBar = () => {
 
             <Link
                 className="navbar-brand"
-                to="/"
+                to="/members"
             >
-                Home
+                Miembros
             </Link>
 
             <div className="navbar-collapse">
@@ -29,22 +29,30 @@ export const NavBar = () => {
 
                     <NavLink
                         className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }
-                        to="/login"
+                        to="/search"
                     >
-                        Login
-                    </NavLink>
-
-                    <NavLink
-                        className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }
-                        to="/about"
-                    >
-                        About
+                        Buscar
                     </NavLink>
 
                 </div>
             </div>
 
+            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
+                <ul className="navbar-nav ml-auto">
 
+                    <span className="nav-item nav-link text-primary">
+                        { user?.name }
+                    </span>
+
+                    <button
+                        className="nav-item nav-link btn"
+                        onClick={ onLogout }
+                    >
+                        Logout
+                    </button>
+
+                </ul>
+            </div>
         </nav>
 
     )
